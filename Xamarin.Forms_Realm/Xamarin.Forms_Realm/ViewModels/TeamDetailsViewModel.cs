@@ -66,6 +66,10 @@ namespace Xamarin.Forms_Realm.ViewModels {
 
             var team = context.Find<Team>(teamId);
 
+            // Using LINQ
+            // var team = from t in context.All<Team>() where t.TeamId == teamId select t;
+            // var team2 = context.All<Team>().Where(t => t.TeamId == teamId).FirstOrDefault();
+
             // Setting property values from team object
             // that we get from database
             Title = team.Title;
@@ -75,6 +79,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
 
             // You can not do like this:
             // Players = new ObservableCollection<Player>(context.All<Player>().Where(p => p.Team.TeamId == _teamId));
+            
             // Querying by nested RealmObjects attributes is not currently supported:
             Players = new ObservableCollection<Player>(context.All<Player>().Where(p => p.Team == team));
 

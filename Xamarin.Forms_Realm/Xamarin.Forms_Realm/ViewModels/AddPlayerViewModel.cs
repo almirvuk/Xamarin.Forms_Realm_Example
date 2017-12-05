@@ -59,6 +59,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             context = Realm.GetInstance();
 
             var team = context.All<Team>().Where(t => t.TeamId == teamId).FirstOrDefault();
+            var team2 = context.Find<Team>(_teamId); 
 
             TeamName = team.Title;
 
@@ -77,6 +78,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
                     Position = Position,
                     Team = team
                 });
+               
             });
 
             Application.Current.MainPage.Navigation.PopAsync();

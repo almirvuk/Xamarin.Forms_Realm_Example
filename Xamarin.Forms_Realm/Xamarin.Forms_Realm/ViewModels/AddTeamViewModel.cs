@@ -51,14 +51,16 @@ namespace Xamarin.Forms_Realm.ViewModels {
             Realm context = Realm.GetInstance();
 
             context.Write(() =>  {
-
                 context.Add<Team>(new Team() { City = City, StadiumName = StadiumName, Title = Title, Manager = Manager });
             });
 
             /* 
             *   Also you can use it like this
             *   using (var transaction = context.BeginWrite()) {
+            *   
             *       context.Add<Team>(new Team() { City = City, StadiumName = StadiumName, Title = Title, Manager = Manager });
+            *       
+            *       // Important
             *       transaction.Commit();
             *   }
             */

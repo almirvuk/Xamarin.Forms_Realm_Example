@@ -3,7 +3,7 @@ using System;
 
 namespace Xamarin.Forms_Realm.Models {
 
-    public class Player : RealmObject{
+    public class Player : RealmObject {
 
         [PrimaryKey]
         public string PlayerId { get; set; } = Guid.NewGuid().ToString();

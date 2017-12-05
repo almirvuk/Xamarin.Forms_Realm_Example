@@ -25,9 +25,17 @@ namespace Xamarin.Forms_Realm.ViewModels {
 
         public TeamListViewModel() {
 
+            var myConfig = new RealmConfiguration("Primary.realm");
+
+            // Realm context = Realm.GetInstance(myConfig);
             Realm context = Realm.GetInstance();
 
-            AllTeams = new ObservableCollection<Team>(context.All<Team>());
+            // Realm.DeleteRealm(myConfig);
+            // var freshRealm = Realm.GetInstance(myConfig);
+
+            var allTeams = context.All<Team>();
+
+            AllTeams = new ObservableCollection<Team>(allTeams);
 
             AddTeamCommand = new Command(async ()=> await Application.Current.MainPage.Navigation.PushAsync(new AddTeamPage()));
         }

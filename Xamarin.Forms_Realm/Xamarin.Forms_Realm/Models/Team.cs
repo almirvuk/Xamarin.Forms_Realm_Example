@@ -1,6 +1,7 @@
 ﻿using Realms;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Xamarin.Forms_Realm.Models {
 
