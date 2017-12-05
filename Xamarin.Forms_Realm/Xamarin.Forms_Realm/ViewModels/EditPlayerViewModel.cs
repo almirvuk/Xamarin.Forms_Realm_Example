@@ -17,7 +17,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             get { return teamName; }
             set {
                 teamName = value;
-                OnPropertyChanged("TeamName");
+                OnPropertyChanged();
             }
         }
 
@@ -26,7 +26,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             get { return name; }
             set {
                 name = value;
-                OnPropertyChanged("Name");
+                OnPropertyChanged();
             }
         }
 
@@ -35,7 +35,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             get { return position; }
             set {
                 position = value;
-                OnPropertyChanged("Position");
+                OnPropertyChanged();
             }
         }
 
@@ -44,7 +44,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             get { return jerseyNumber; }
             set {
                 jerseyNumber = value;
-                OnPropertyChanged("JerseyNumber");
+                OnPropertyChanged();
             }
         }
 

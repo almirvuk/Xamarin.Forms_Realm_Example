@@ -11,7 +11,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
         public string Title {
             get { return title; }
             set { title = value;
-                OnPropertyChanged("Title");
+                OnPropertyChanged();
             }
         }
 
@@ -19,7 +19,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
         public string Manager {
             get { return manager; }
             set { manager = value;
-                OnPropertyChanged("Manager");
+                OnPropertyChanged();
             }
         }
 
@@ -27,7 +27,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
         public string City {
             get { return city; }
             set { city = value;
-                OnPropertyChanged("City");
+                OnPropertyChanged();
             }
         }
 
@@ -35,7 +35,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
         public string StadiumName {
             get { return stadiumName; }
             set { stadiumName = value;
-                OnPropertyChanged("StadiumName");
+                OnPropertyChanged();
             }
         }
 
@@ -60,7 +60,8 @@ namespace Xamarin.Forms_Realm.ViewModels {
             *   
             *       context.Add<Team>(new Team() { City = City, StadiumName = StadiumName, Title = Title, Manager = Manager });
             *       
-            *       // Important
+            *       // Important to commit or 
+            *       // it will automatically be rolled back
             *       transaction.Commit();
             *   }
             */

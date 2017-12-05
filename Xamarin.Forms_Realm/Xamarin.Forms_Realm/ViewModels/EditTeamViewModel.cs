@@ -17,7 +17,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             get { return title; }
             set {
                 title = value;
-                OnPropertyChanged("Title");
+                OnPropertyChanged();
             }
         }
 
@@ -26,7 +26,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             get { return manager; }
             set {
                 manager = value;
-                OnPropertyChanged("Manager");
+                OnPropertyChanged();
             }
         }
 
@@ -35,7 +35,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             get { return city; }
             set {
                 city = value;
-                OnPropertyChanged("City");
+                OnPropertyChanged();
             }
         }
 
@@ -44,7 +44,7 @@ namespace Xamarin.Forms_Realm.ViewModels {
             get { return stadiumName; }
             set {
                 stadiumName = value;
-                OnPropertyChanged("StadiumName");
+                OnPropertyChanged();
             }
         }
 
